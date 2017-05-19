@@ -24,7 +24,7 @@ jobs:
       script: script
       deploy: &heroku
         prodvider: heroku
-        app: quattro-staggione
+        app: quattro-stagione
         on:
           branch: master
         api_key:
