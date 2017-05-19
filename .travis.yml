@@ -21,10 +21,10 @@ jobs:
     - stage: build
       script: ember build
     - stage: deploy
-      script: skip
       deploy: &heroku
         prodvider: heroku
         app: quattro-stagione
+        script: skip
         on:
           branch: master
         api_key:
