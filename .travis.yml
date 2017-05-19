@@ -21,7 +21,7 @@ jobs:
     - stage: build
       script: ember build
     - stage: deploy
-      script: script
+      script: skip
       deploy: &heroku
         prodvider: heroku
         app: quattro-stagione
