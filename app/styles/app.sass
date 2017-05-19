@@ -1,0 +1,39 @@
+body
+  background-color: green
+
+
+.pizza
+  position: relative
+  @media (min-width: 800px)
+    width: 400px
+    heigth: 400px
+    margin: auto
+
+.pizza-slice
+  position: absolute
+  &:nth-child(2)
+    right: 6em
+  &:nth-child(3)
+    top: 6em
+    right: 2.5em
+  &:nth-child(4)
+    top: 12em
+    left: 7em
+
+
+.slice-header
+  display: none
+.place
+  display: none
+
+.slice-Wedding
+  transform: rotate(-15deg)
+
+.slice-Pberg
+  transform: rotate(45deg)
+
+.slice-Fhain-Xberg
+  transform: rotate(-255deg)
+
+.slice-Neukölln
+  transform: rotate(166deg)
