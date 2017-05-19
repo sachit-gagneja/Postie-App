@@ -7,7 +7,7 @@ export default Ember.Component.extend({
 
   isShowingPlaces: false,
 
-  filteredPlaces: Ember.computed.filter('places', function (place, index, array) {
+  filteredPlaces: Ember.computed.filter('places', function (place) {
     return place.kiez === this.get('kiez.name');
   }),
 

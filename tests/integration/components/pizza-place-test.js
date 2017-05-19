@@ -6,20 +6,13 @@ moduleForComponent('pizza-place', 'Integration | Component | pizza place', {
 });
 
 test('it renders', function(assert) {
+  let place = {
+    name: 'Foo',
+    address: 'An Address'
+  };
 
-  // Set any properties with this.set('myProperty', 'value');
-  // Handle any actions with this.on('myAction', function(val) { ... });
+  this.set('place', place);
+  this.render(hbs`{{pizza-place place=place}}`);
 
-  this.render(hbs`{{pizza-place}}`);
-
-  assert.equal(this.$().text().trim(), '');
-
-  // Template block usage:
-  this.render(hbs`
-    {{#pizza-place}}
-      template block text
-    {{/pizza-place}}
-  `);
-
-  assert.equal(this.$().text().trim(), 'template block text');
+  assert.equal(this.$('address').text().trim(), 'An Address');
 });

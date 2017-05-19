@@ -5,21 +5,16 @@ moduleForComponent('pizza-kiez', 'Integration | Component | pizza kiez', {
   integration: true
 });
 
-test('it renders', function(assert) {
+test('it renders', function (assert) {
 
-  // Set any properties with this.set('myProperty', 'value');
-  // Handle any actions with this.on('myAction', function(val) { ... });
+  let kiez = {
+    name: 'Foo',
+    long: 'Foobar'
+  };
 
-  this.render(hbs`{{pizza-kiez}}`);
+  this.set('kiez', kiez);
 
-  assert.equal(this.$().text().trim(), '');
+  this.render(hbs`{{pizza-kiez kiez=kiez}}`);
 
-  // Template block usage:
-  this.render(hbs`
-    {{#pizza-kiez}}
-      template block text
-    {{/pizza-kiez}}
-  `);
-
-  assert.equal(this.$().text().trim(), 'template block text');
+  assert.equal(this.$('.slice-header small').text().trim(), 'Foobar');
 });
