@@ -8,13 +8,11 @@ cache:
   - "$HOME/.npm"
 before_install:
 - npm config set spin false
-- npm install -g phantomjs-prebuilt bower ember-cli
+- npm install -g phantomjs-prebuilt ember-cli
 - phantomjs --version
-- bower --version
 
 install:
 - npm install
-- bower install
 
 jobs:
   include:
