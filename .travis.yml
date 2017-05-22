@@ -22,7 +22,7 @@ jobs:
       script: ember build
     - stage: deploy
       deploy: &heroku
-        prodvider: heroku
+        provider: heroku
         app: quattro-stagione
         script: skip
         on:
