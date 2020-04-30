@@ -20,12 +20,3 @@ jobs:
       script: ember test
     - stage: build
       script: ember build
-    - stage: deploy
-      deploy: &heroku
-        provider: heroku
-        app: quattro-stagione
-        script: skip
-        on:
-          branch: master
-        api_key:
-          secure: delPBAcfaVQh3GlXkxeeqAStuCr9gkrgMX6Ha3OCX5WOh4zMgfbkAyi0+cy/QET6XWi0OZTe3g9LzuhBknYy5G1nYvjizOzducT6bfIywiXMGnrJd0SZHwd0t3TnhTDjjfGomsvCAWnO4ZYf0oau12iQm3Px9GIOdgFWRp2AHjORlJedMWKScHMTuhYtLNGk5t+YgMSGXpwumLRf0l4uC8qwyuX2a96rH39hSSJIDq14C+sHzktsLFqDy6biNRTuAoi7fJmIFE7RJg1yojPgYFrDMvem7TULEVcwv2TuIK9HCBVh8sf3SF9RVfa3ci94K1Bw10yW+z7xuEoFeZk3svlgrOG5p9usLs4mN+dwpg574lE1dmlYNtQloe1exw8H9b+us01W7tfIe2I1scoyZwKhng9EVryFAyQEMSDdpv/xiK2m+NW2GgvgiXaQBYFFVoxznjE3Psuz8friRmXn4Ta6MsomY18JdzqtSnjRiobATms2rFckaH7HfPZHDvJiRW0Yr4iv+T3S/vIH9Jo8tuh+eFm4/bQ2SOJdqKEyT/KF5NzuDMZEVcpd9j16TfzyqUFSxCIXvpel88zjpPsGyotaMxB56OvZ73JpPe7cWYRE+RGtTP9l+7fr5lkAPnPpLO4FVcRU8J+DvS8cGPvSZyGDwpuvd0h9w+WVabrmU9k=
